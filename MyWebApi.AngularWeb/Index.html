@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="css/mobile-angular-ui-base.min.css" />
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="/Scripts/angular-route.min.js"></script>
+    <script src="/js/mobile-angular-ui.min.js"></script>
+    <script src="app/app.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <!-- Sidebars -->
+    <div class="sidebar sidebar-left">
+    </div>
+    <div class="sidebar sidebar-right"><!-- ... --></div>
+
+    <div class="app">
+        <div class="navbar navbar-app navbar-absolute-top">
+            <!-- Top Navbar -->
+            <div class="navbar-brand navbar-brand-center">
+                <a href="/#/home">Home</a>
+            </div>
+
+            <div class="btn-group pull-left">
+                <div class="btn btn-navbar">
+                    Left Action
+                </div>
+            </div>
+
+            <div class="btn-group pull-right">
+                <div class="btn btn-navbar">
+                    Right Action
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-app navbar-absolute-bottom"><!-- Bottom Navbar --></div>
+
+        <!-- App body -->
+
+        <div class='app-body'>
+            <div class='app-content'>
+                <ng-view></ng-view>
+            </div>
+        </div>
+    </div><!-- ~ .app -->
+    <!-- Modals and Overlays -->
+    <div ui-yield-to="modals"></div>
+
+</body>
+</html>
